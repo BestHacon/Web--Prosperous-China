@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<!-- 强制浏览器的渲染方式，默认使用chrome来渲染，然后再按照IE该浏览器的最新版本来渲染 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge，chrome=1">
+	<!-- viewport元标签控制布局 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keyword" content="">
+	<meta name="author" name="21软工2班刘骏龙">
+	<title>Prosperous China - About</title>
+	<link type="image/png" sizes="96x96" rel="icon" href="../images/iconChina.png">
+	<link rel="stylesheet" href="../css/about.css" type="text/css">
+	<script src="../js/jquery-3.6.0.js" type="text/javascript"></script>
+	<script src="../js/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="../js/about.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- 开场拉幕效果，衔接上一页面 -->
+	<div id="bar"></div>
+	<!-- 顶部标签 -->
+	<div id="topLabel">
+		<div id="leftCaption">
+			<div id="arrow"></div>
+			BACK LAST
+		</div>
+	</div>
+	<!-- 空div，用于定位 -->
+	<div id="pos"></div>
+	<div id="container">
+		<div id="pathDiv">
+			<div id="svgDiv">
+				<svg id="svg" width="700" height="1750" fill="none">
+					<path id="main" d="M350 0 L350 1750" 
+						stroke="url(#paint0_linear)" stroke-width="80" style="stroke-dashoffset: 1800px; stroke-dasharray: 1800px 1750px;"></path>
+					<path id="branch1" d="M100 200 L100 312.096 C100 364.42 131.455 411.61 190.5 431.75 V431.75 C287.09 451.89 350 499.08 350 551.4 L350 600" 
+						stroke="url(#paint1_linear)" stroke-width="80" style="stroke-dashoffset: 800px; stroke-dasharray: 800px 800px;"></path>
+					<path id="branch2" d="M600 550 L600 662.096 C600 714.42 568.545 761.61 429.75 781.75 V781.75 C381.455 801.89 350 849.08 350 901.4 L350 950" 
+						stroke="url(#paint2_linear)" stroke-width="80" style="stroke-dashoffset: 800px; stroke-dasharray: 800px 800px;"></path>
+					<path id="branch3" d="M100 900 L100 1012.096 C100 1064.42 131.455 1111.61 190.5 1131.75 V1131.75 C287.09 1151.89 350 1199.08 350 1251.4 L350 1300" 
+						stroke="url(#paint3_linear)" stroke-width="80" style="stroke-dashoffset: 800px; stroke-dasharray: 800px 800px;"></path>
+					<path id="branch4" d="M600 1250 L600 1362.096 C600 1414.42 568.545 1461.61 429.75 1481.75 V1481.75 C381.455 1501.89 350 1549.08 350 1601.4 L350 1650" 
+						stroke="url(#paint4_linear)" stroke-width="80" style="stroke-dashoffset: 800px; stroke-dasharray: 800px 800px;"></path>
+					<defs>
+						<linearGradient id="paint0_linear" x1="350" y1="0" x2="350" y2="1750" gradientUnits="userSpaceOnUse">
+							<!-- 到1的位置变成绿色 -->
+							<stop stop-color="rgb(235,122,139)"></stop>
+							<stop offset=".32432" stop-color="rgb(166,152,245)"></stop>	
+							<stop offset="0.51351" stop-color="rgb(135,222,210)"></stop>	
+							<stop offset="0.70270" stop-color="rgb(203,245,137)"></stop>	
+							<stop offset="0.92" stop-color="rgb(235,196,131)"></stop>		
+						</linearGradient>
+						<linearGradient id="paint1_linear" x1="100" y1="200" x2="350" y2="600" gradientUnits="userSpaceOnUse">
+							<stop stop-color="rgb(235,122,139)"></stop>
+							<stop offset="1" stop-color="rgb(166,152,245)"></stop>
+						</linearGradient>
+						<linearGradient id="paint2_linear" x1="600" y1="550" x2="350" y2="950" gradientUnits="userSpaceOnUse">
+							<stop stop-color="rgb(166,152,245)"></stop>
+							<stop offset="1" stop-color="rgb(135,222,210)"></stop>
+						</linearGradient>
+						<linearGradient id="paint3_linear" x1="100" y1="900" x2="350" y2="1300" gradientUnits="userSpaceOnUse">
+							<stop stop-color="rgb(135,222,210)"></stop>
+							<stop offset="1" stop-color="rgb(203,245,137)"></stop>
+						</linearGradient>
+						<linearGradient id="paint4_linear" x1="600" y1="1250" x2="350" y2="1650" gradientUnits="userSpaceOnUse">
+							<stop stop-color="rgb(203,245,137)"></stop>
+							<stop offset="1" stop-color="rgb(235,196,131)"></stop>
+						</linearGradient>
+					</defs>
+				</svg>
+			</div>
+			
+			<div class="outerDiv">
+				<div id="word0" class="words">
+					<div id="t1" class="t">作品主题</div>
+					盛世中国——展现中国公民精神风貌、宣扬中国优良传统文化、体现中国的大国责任与担当
+				</div>
+			</div>
+			<div class="outerDiv">
+				<div id="word1" class="words">
+					<div id="t2" class="t">设计理念</div>
+					充分利用已学知识，广泛参考热门网站设计思路，制作简洁美观灵动的网站
+				</div>
+			</div>
+			<div class="outerDiv">
+				<div id="word2" class="words">
+					<div id="t3" class="t">制作路线</div>
+					2022年5月01日，创建文件夹，制作正式开始<br>
+					2022年5月03日，调查查看现有网站，寻找设计思路<br>
+					2022年5月05日，确定制作主题-“盛世中国”<br>
+					2022年5月20日，完成首页内容即动画制作<br>
+					2022年6月01日，完成首页与其他页面的过度衔接动画<br>
+					2022年6月05日，完成五大主题介绍文章页面<br>
+					2022年6月11日，完成个人自我介绍页面及ABOUT页面<br>
+					2022年6月12日，再次复核检查，在不同环境下测试<br>
+				</div>
+			</div>
+			<div class="outerDiv">
+				<div id="word3" class="words">
+					<div id="t4" class="t">作品内容</div>
+					以中国特色社会主义事业”五位一体“总布局为主线，分别在政治、经济、文化、社会、民生五个方面中挑选一个案例展示，具体为：<br>
+					政治：百年党史百年初心<br>
+					经济：抗击新冠肺炎疫情<br>
+					文化：中华传统节日端午节<br>
+					社会：北京2022年冬奥会<br>
+					生态：碳达峰与碳中和<br>
+				</div>
+			</div>
+			<div class="outerDiv">
+				<div id="word4" class="words">
+					<div id="t5" class="t">亟待改进</div>
+					限于作者个人水平以及时间要求，现有一下几个方面仍需打磨：<br>
+					①文章格式模板化、内容不够充实<br>
+					②动画实现方法不统一，部分容易卡掉<br>
+					③图片展现的立体感不够强，浮动生硬<br>
+					④首页左下角比较空，可以适当添加内容<br>
+					⑤缺乏对安卓平台的适配，对于不同页面尺寸的适配不够完善<br>
+				</div>
+			</div>
+			<div class="outerDiv">
+				<div id="word5" class="words">
+					<div id="t6" class="t">心得总结</div>
+					此次完成Web作业的过程对于本人来说是一次锻炼，更是一次学习。它让我深刻明白了书本和课堂上学习的东西远远不够，以及现阶段的代码水平非常有待提升。这次的作业不是学习完Web前端知识后完成的，而是边学边完成的。对于很多问题和新功能新框架，例如“JS的闭包特性”、“CSS3的transition动画过度属性”，都是经过发现问题—思考问题—调查问题—解决问题这几个步骤才能真正学明白。
+					这次大作业锻炼了本人的自主学习能力、独立思考和解决问题的能力，为接下来的课外科研项目打下了一定基础。<br>
+					集体学习有期限，自我学习无穷期。“路漫漫其修远兮，吾将上下而求索”。与诸位访客共勉。
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

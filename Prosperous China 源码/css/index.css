@@ -1,0 +1,285 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 给html添加高度，防止height的百分比属性失效 */
+html,body{
+    width:100%; 
+    height:100%;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    animation: openScene 2s ease 0s 1;
+}
+
+#firstContainer{
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    /* transform: translate3d(0,0,100px); */
+}
+
+#firstToDel{
+    float: left;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.bar{
+    background-color: white;
+    position: absolute;
+    height: 0%;
+    width: 1.25%;
+    /* width: 200%; */
+    bottom: 0px;
+    z-index: 1;
+}
+
+.tittleTop{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0% 0% 12%;
+}
+
+.caption1{
+    height: 120px;
+}
+
+#curtain{
+    width: 498px;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+    display: none;
+}
+
+.caption2{
+    margin-top: 1%;
+    font-size: 25px;
+}
+
+.tittleBottom{
+    position:absolute;
+    bottom: 0%;
+    margin: 0% 0% 10% 12%;
+    border-radius:25px 25px 25px 0px;
+    background-color:rgb(38,38,38);
+}
+
+.caption3{
+    margin: 20px;
+    font-style: italic;
+}
+
+/* 设置右边的bar */
+#rightBar{
+    width: 0%;
+    position: absolute;
+    left: 100%;
+    z-index: 2;
+    transition:all 0.6s;
+    background-color: black;
+    z-index: 3;
+}
+
+/* 第二部分显示的div */
+#firstToAppear{
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    /* display: none; */
+    opacity: 0; 
+    transition: all 0.6s;
+    z-index: 2;
+}
+
+#newBar{
+    /* background-color: white; */
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0px;
+    z-index: 0;
+    transition: all 0.6s;
+}
+
+#newTittle{
+    margin: 20% 0% 0% 11%;
+    font-weight: bolder;
+    font-size: 85px;
+    white-space:nowrap;
+    cursor: default;
+    transition: all 0.6s;
+    
+}
+
+#newShow{
+    width: 80%;
+    margin: 2% 0% 0% 11%;
+    font-size: large;
+    cursor: default;
+    transition: all 0.6s;
+    text-align: justify;
+}
+
+#startBut{
+    display: inline-block;
+    transition: all 0.6s;
+    margin: 4% 0% 0% 11%;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+#more{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 24px;
+    transition: all 0.6s;
+}
+
+#arrow{
+    float: left;
+    height: 14px;
+    width: 14px;
+    border-width:4px 4px 0px 0px;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 3.4px 0px 0px 0px;
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+
+
+#topLabel{
+    /* display: none;
+    opacity: 0; */
+    transition: all 0.6s;
+    position: absolute;
+    font-weight: bold;
+    width: 100%;
+    opacity:0;
+    z-index: 2;
+}
+
+#rightCaption{
+    float: right;
+    margin: 2.5% 5.5% 0% 0%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#leftCaption{
+    float: left;
+    margin: 2.5% 0% 0% 5.5%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* 字体变色 */
+.blackChangeColorWords{
+    animation: blackcolorchange 4s;
+    animation-iteration-count: infinite;/*字体色循环*/
+    animation-direction:alternate;      /*字体色来回变*/
+    animation-timing-function:linear;   /*过程匀速*/
+}
+@keyframes blackcolorchange{
+    0%{color:rgb(0,0,0) }
+    25%{color:rgb(63,75,212) }
+    50%{color:rgb(74,222,246)}
+    75%{color:rgb(194,82,235) }
+    100%{color:rgb(246,149,74)}
+}
+
+.whiteChangeColorWords{
+    animation: whitecolorchange 4s;
+    animation-iteration-count: infinite;/*字体色循环*/
+    animation-direction:alternate;      /*字体色来回变*/
+    animation-timing-function:linear;   /*过程匀速*/
+}
+@keyframes whitecolorchange{
+    0%{color:rgb(255,255,255) }
+    25%{color:rgb(247,184,82) }
+    50%{color:rgb(199,224,85)}
+    75%{color:rgb(82,247,175) }
+    100%{color:rgb(78,121,237)}
+}
+
+#secContainer{
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* 修改透视原点 */
+    perspective-origin: 10% 50%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transition: all 0.6s;
+}
+
+.pics{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    transform-origin: 50% 50%;
+    transition: all 0.6s;
+    transform:  rotate(0deg) rotateX(20deg) rotateY(0deg);
+} 
+
+.picDiv{
+    margin: 10px 0px 10px 0px;
+}
+
+#move{
+    position: absolute;
+    /* 通过修改top使图像移动 */
+    top: 0px;
+    /* transition: all 0.6s; */
+}
+
+.pic{
+    /* 图像大小，100%为一半屏幕大小 */
+    width: 80%;
+    /* filter:grayscale(100%) */
+    cursor: pointer;
+    transition: all 0.6s;
+    border-radius: 8px;
+}
+
+/* 开场淡入 */
+@keyframes openScene {
+    0% {
+        opacity: 0;
+    }
+    100% {
+		opacity: 1;
+    }
+}
+
+/* 淡出 */
+@keyframes endScene {
+    0% {
+        width: 1%;
+        left: 99%;
+    }
+    75% {
+        width: 100%;
+        left: 0%;
+    }
+    100% {
+        width: 100%;
+        left: 0%;
+    }
+}

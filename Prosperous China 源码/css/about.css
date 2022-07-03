@@ -1,0 +1,167 @@
+
+/* 给html添加高度，防止height的百分比属性失效 */
+html,body{
+    width:100%; 
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    color: white;
+    background-color: black;
+    /* background-color: white; */
+    animation: openScene 2s ease 0s 1;
+}
+
+#bar{
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    /* animation: openScene 1.5s ease 0s 1; */
+    z-index: 2;
+    /* background-color: #ffee00; */
+}
+
+#topLabel{
+    position: fixed;
+    top: 0px;
+    font-weight: bold;
+    width: 100%;
+    z-index: 1;
+    transition:all 0.6s;
+}
+
+
+#leftCaption{
+    float: left;
+    margin: 2.5% 0% 0% 5%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* 字体变色 */
+.blackChangeColorWords{
+    animation: blackcolorchange 4s;
+    animation-iteration-count: infinite;/*字体色循环*/
+    animation-direction:alternate;      /*字体色来回变*/
+    animation-timing-function:linear;   /*过程匀速*/
+}
+@keyframes blackcolorchange{
+    0%{color:rgb(0,0,0) }
+    25%{color:rgb(63,75,212) }
+    50%{color:rgb(74,222,246)}
+    75%{color:rgb(194,82,235) }
+    100%{color:rgb(246,149,74)}
+}
+
+.whiteChangeColorWords{
+    animation: whitecolorchange 4s;
+    animation-iteration-count: infinite;/*字体色循环*/
+    animation-direction:alternate;      /*字体色来回变*/
+    animation-timing-function:linear;   /*过程匀速*/
+}
+@keyframes whitecolorchange{
+    0%{color:rgb(255,255,255) }
+    25%{color:rgb(247,184,82) }
+    50%{color:rgb(199,224,85)}
+    75%{color:rgb(82,247,175) }
+    100%{color:rgb(78,121,237)}
+}
+
+#arrow{
+    float: left;
+    height: 14px;
+    width: 14px;
+    border-width:0px 0px 4px 4px;
+    border-style: solid;
+    border-radius: 4px;
+    margin: 1px 0px 0px 5px;
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+#pos{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: black;
+    height: 0px;
+    width: 0px;
+}
+
+#container{
+    /* text-align: center; */
+    /* position: relative; */
+    width:100%; 
+    height:100%;
+    margin: 500px  0px;
+    padding-bottom: 1500px;
+}
+
+#pathDiv{
+    /* margin: 200px auto; */
+    width:100%; 
+    height:100%;
+    text-align: center;
+}
+
+
+.words{
+    width: 400px;
+    min-height: 120px;
+    position: absolute;
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 20px 20px;
+    font-weight: bold;
+    transition: all 0.6s;
+    /* text-indent:2em; */
+    
+}
+
+.t{
+    /* display: inline-block; */
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#word0{
+    padding-top: 20px;
+    background-color: rgb(235,122,139);
+}
+
+#word1{
+    padding-top: 20px;
+    background-color: rgb(235,122,139);
+}
+
+#word2{
+    background-color: rgb(166,152,245);
+}
+
+#word3{
+    background-color: rgb(135,222,210);
+}
+
+#word4{
+    background-color: rgb(203,245,137);
+}
+
+#word5{
+    background-color: rgb(235,196,131);
+}
+
+/* 开场淡入 */
+@keyframes openScene {
+    0% {
+        opacity: 0;
+    }
+    100% {
+		opacity: 1;
+    }
+}

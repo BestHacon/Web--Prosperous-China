@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 给html添加高度，防止height的百分比属性失效 */
+html,body{
+    width:100%; 
+    height:100%;
+}
+
+body{
+    animation: openScene 2s ease 0s 1;
+    /* padding-bottom: 40px; */
+}
+
+#container{
+    position: relative;
+    height: 80%;
+    width: 100%;
+}
+
+#pic{
+    position: absolute;
+	left:50%;
+    top: 50%;
+    transform: translate(-80%,-50%);
+}
+
+#pic>img{
+    margin-left: 30%;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#words{
+    color:khaki;
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+	left:50%;
+    top: 50%;
+	transform: translate(0%,-50%);
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+#main{
+    position: relative;
+    width: 80%;
+    /* height: 80%; */
+    margin: 0% 10% 0% 10%;
+    padding: 20px 0%;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    opacity: 0.6;
+    /* height: 5000px; */
+}
+
+#main-container{
+    padding-bottom: 50px;
+}
+
+#tittle{
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px 17px;
+    text-align: center;
+    opacity: 1;
+}
+
+#essay{
+    padding: 0px 30px;
+    opacity: 1;
+    font-size: 30px;
+    text-indent:2em;
+}
+
+#col{
+    width: 100%;
+    height: 50px;
+}
+
+/* 开场淡入 */
+@keyframes openScene {
+    0% {
+        opacity: 0;
+    }
+    100% {
+		opacity: 1;
+    }
+}
